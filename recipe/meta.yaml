@@ -33,9 +33,7 @@ test:
     - zocalo
     - zocalo.service
   commands:
-    - zocalo.go --help
     - zocalo.service --help
-    - zocalo.wrap --help
 
 about:
   home: https://github.com/DiamondLightSource/zocalo-python
