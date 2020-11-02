@@ -1,13 +1,13 @@
 {% set name = "zocalo" %}
-{% set version = "0.6.4" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ab5d8300275fd36a5645bd92b1d633974fc97eec91268f692a49bcf3bcca86b4
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
+  sha256: f37d4664aee94bce1c42ae0805a727e54129f24d6e5218b0aa5fd70c90494d01
 
 build:
   number: 0
@@ -16,24 +16,28 @@ build:
     - zocalo.go = zocalo.cli.go:run
     - zocalo.service = zocalo.service:start_service
     - zocalo.wrap = zocalo.cli.wrap:run
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - graypy
-    - python
+    - python >=3.6
     - setuptools
     - workflows
 
 test:
   imports:
     - zocalo
+    - zocalo.cli
     - zocalo.service
   commands:
+    - pip check
     - zocalo.service --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/DiamondLightSource/zocalo-python
