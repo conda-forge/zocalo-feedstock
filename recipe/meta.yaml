@@ -1,5 +1,5 @@
 {% set name = "zocalo" %}
-{% set version = "0.6.3" %}
+{% set version = "0.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,16 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 309b11cf472b7dcf63dbf3e9b5759fba4601af46053e24bf755b1482a5a010ad
+  sha256: ab5d8300275fd36a5645bd92b1d633974fc97eec91268f692a49bcf3bcca86b4
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - zocalo.go = zocalo.cli.go:run
     - zocalo.service = zocalo.service:start_service
     - zocalo.wrap = zocalo.cli.wrap:run
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv'
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
 
 requirements:
   host:
