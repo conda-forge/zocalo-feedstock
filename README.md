@@ -5,11 +5,13 @@ Home: https://github.com/DiamondLightSource/zocalo-python
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zocalo-feedstock/blob/master/LICENSE.txt)
 
 Summary: Infrastructure components for automated data processing at Diamond Light Source
 
+Development: https://github.com/DiamondLightSource/zocalo-python
 
+Documentation: https://zocalo.readthedocs.io/en/latest/
 
 Current build status
 ====================
