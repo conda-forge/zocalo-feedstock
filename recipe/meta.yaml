@@ -1,5 +1,5 @@
 {% set name = "zocalo" %}
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
-  sha256: 47f4a02fb1d5c36d556c118e496a44cf03b8f4ecabee8c8598be48a58d77306f
+  sha256: 424248b768708f447ca448c21ed6db1a74847a40de8c5a16aca56442280e7a73
 
 build:
   number: 0
@@ -40,7 +40,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/DiamondLightSource/zocalo-python
+  home: https://pypi.org/project/zocalo/
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
