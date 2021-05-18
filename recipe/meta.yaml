@@ -1,5 +1,5 @@
 {% set name = "zocalo" %}
-{% set version = "0.7.4" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
-  sha256: 424248b768708f447ca448c21ed6db1a74847a40de8c5a16aca56442280e7a73
+  sha256: 4b181f7f64f60461a05090754ef29d2aa438f2936e134975342a8c67f540c2e3
 
 build:
   number: 0
@@ -23,10 +23,12 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - graypy
+    - graypy >=1.0
+    - marshmallow
     - python >=3.6
+    - pyyaml
     - setuptools
-    - workflows
+    - workflows >=2.7
 
 test:
   imports:
