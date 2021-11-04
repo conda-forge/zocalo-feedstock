@@ -1,5 +1,5 @@
 {% set name = "zocalo" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
-  sha256: d8e693c5aa2ac2c32d00dcbe1ccd2c150ccb24a80bd70b9e3ab805e881d22d96
+  sha256: 096cada9724133de067de15444c3371252448ed78e51290adb1f3b216da6883c
 
 build:
   number: 0
   noarch: python
   entry_points:
+    - zocalo.dlq_check = zocalo.cli.dlq_check:run
+    - zocalo.dlq_purge = zocalo.cli.dlq_purge:run
+    - zocalo.dlq_reinject = zocalo.cli.dlq_reinject:run
     - zocalo.go = zocalo.cli.go:run
     - zocalo.queue_drain = zocalo.cli.queue_drain:run
     - zocalo.service = zocalo.service:start_service
@@ -30,7 +33,7 @@ requirements:
     - python >=3.6
     - pyyaml
     - setuptools
-    - workflows >=2.7
+    - workflows >=2.14
 
 test:
   imports:
