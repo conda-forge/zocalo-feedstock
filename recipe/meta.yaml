@@ -30,8 +30,10 @@ requirements:
   run:
     - graypy >=1.0
     - marshmallow
+    - pydantic
     - python >=3.6
     - pyyaml
+    - requests
     - setuptools
     - workflows >=2.14
 
