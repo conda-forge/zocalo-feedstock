@@ -1,5 +1,5 @@
 {% set name = "zocalo" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
-  sha256: 096cada9724133de067de15444c3371252448ed78e51290adb1f3b216da6883c
+  sha256: 8c8885e6be8dd29546b45ac9282aa0ba695249ae5956257e354da6cfc56c84a8
 
 build:
   number: 0
@@ -30,8 +30,10 @@ requirements:
   run:
     - graypy >=1.0
     - marshmallow
+    - pydantic
     - python >=3.6
     - pyyaml
+    - requests
     - setuptools
     - workflows >=2.14
 
