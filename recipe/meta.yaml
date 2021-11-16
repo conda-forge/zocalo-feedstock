@@ -26,12 +26,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
     - graypy >=1.0
     - marshmallow
     - pydantic
-    - python >=3.6
+    - python >=3.8
     - pyyaml
     - requests
     - setuptools
