@@ -1,11 +1,11 @@
-About zocalo
-============
+About zocalo-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zocalo-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/zocalo/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zocalo-feedstock/blob/main/LICENSE.txt)
 
 Summary: Infrastructure components for automated data processing at Diamond Light Source
 
