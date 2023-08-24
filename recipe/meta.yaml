@@ -1,5 +1,5 @@
 {% set name = "zocalo" %}
-{% set version = "0.29.0" %}
+{% set version = "0.30.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
-  sha256: 7acd4072a15a201d8574c16a3d22f919ef91b679bc871e17e51b2e6805dd47f6
+  sha256: 33b89aae8cb66cc9a4fd57d5b835801bd515b9826548aea0e913340a9befad06
 
 build:
   number: 0
