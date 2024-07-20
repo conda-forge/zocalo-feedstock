@@ -27,7 +27,7 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - poetry-core
+    - poetry-core >1.5,<2
   run:
     - graypy ~=2.0
     - marshmallow >3.19,<4
