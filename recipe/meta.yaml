@@ -28,14 +28,13 @@ requirements:
     - pip
     - python >=3.8
   run:
-    - graypy >=1.0
-    - marshmallow
-    - pydantic <2
+    - graypy ~=2.0
+    - marshmallow ~=3.19
+    - pydantic ~=2
     - python >=3.8
-    - pyyaml
-    - requests
-    - setuptools
-    - workflows >=2.14
+    - pyyaml ~=6
+    - requests ~=2.31
+    - workflows ~=2.27
 
 test:
   imports:
