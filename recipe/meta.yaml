@@ -26,13 +26,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.10
     - poetry-core >1.5,<2
   run:
     - graypy ~=2.0
     - marshmallow >3.19,<4
     - pydantic >2,<3
-    - python >=3.8
+    - python >=3.10
     - pyyaml >6,<7
     - requests >2.31,<3
     - workflows >=2.26,<3
