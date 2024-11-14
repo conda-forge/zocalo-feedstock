@@ -1,5 +1,5 @@
 {% set name = "zocalo" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
-  sha256: cdb29073d495c26049c69a4aec57a14972c768866e426de8004b02560e556c15
+  sha256: faea1352ac554219c0fc57b68dbac513a1ba1852e6bf00161d4eb497817dd79b
 
 build:
   number: 0
@@ -35,7 +35,7 @@ requirements:
     - python >=3.10
     - pyyaml >6,<7
     - requests >2.31,<3
-    - workflows >=2.26,<3
+    - workflows >=3.0
 
 test:
   imports:
