@@ -35,7 +35,7 @@ requirements:
     - python >=3.10
     - pyyaml >6,<7
     - requests >2.31,<3
-    - workflows >=2.26,<3
+    - workflows >=3.0
 
 test:
   imports:
