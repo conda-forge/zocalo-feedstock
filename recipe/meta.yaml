@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "zocalo" %}
 {% set version = "1.2.0" %}
 
@@ -6,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
   sha256: faea1352ac554219c0fc57b68dbac513a1ba1852e6bf00161d4eb497817dd79b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - zocalo.dlq_check = zocalo.cli.dlq_check:run
@@ -26,13 +27,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - poetry-core >1.5,<2
   run:
     - graypy ~=2.0
     - marshmallow >3.19,<4
     - pydantic >2,<3
-    - python >=3.10
+    - python >={{ python_min }}
     - pyyaml >6,<7
     - requests >2.31,<3
     - workflows >=3.0
@@ -48,6 +49,7 @@ test:
     - zocalo.service --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/zocalo/
