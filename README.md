@@ -149,5 +149,6 @@ Feedstock Maintainers
 
 * [@anthchirp](https://github.com/anthchirp/)
 * [@ndevenish](https://github.com/ndevenish/)
+* [@pblowey](https://github.com/pblowey/)
 * [@rjgildea](https://github.com/rjgildea/)
 
