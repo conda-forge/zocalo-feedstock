@@ -62,6 +62,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - pblowey
     - anthchirp
     - ndevenish
     - rjgildea
