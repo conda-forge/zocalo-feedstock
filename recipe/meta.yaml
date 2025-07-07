@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.11" %}
 {% set name = "zocalo" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zocalo-{{ version }}.tar.gz
-  sha256: faea1352ac554219c0fc57b68dbac513a1ba1852e6bf00161d4eb497817dd79b
+  sha256: 18e445856986483b315e2aa69e168ca73b85fb4e8392b1704fdbb82a1cfbf162
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - zocalo.dlq_check = zocalo.cli.dlq_check:run
