@@ -32,11 +32,13 @@ requirements:
   run:
     - graypy ~=2.0
     - marshmallow >3.19,<4
+    - opentelemetry-api
     - pydantic >2,<3
     - python >={{ python_min }}
     - pyyaml >6,<7
     - requests >2.31,<3
     - workflows >=3.0
+
 
 test:
   imports:
